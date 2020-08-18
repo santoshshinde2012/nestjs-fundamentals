@@ -92,6 +92,18 @@ Let TypeOrm generate migrations (for you)
 $ npx typeorm migration:generate -n SchemaSync
 ```
 
+
+## Nest CLI - Generate a new CoffeeRatingModule
+
+```bash
+nest g mo coffee-rating
+```
+
+## Nest CLI - Generate a new CoffeeRatingService 
+
+```bash
+nest g s coffee-rating
+```
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
