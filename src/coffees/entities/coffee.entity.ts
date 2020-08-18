@@ -5,7 +5,9 @@ import {
   ManyToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Flavor } from './flavor.entity';
+import {
+  Flavor
+} from './flavor.entity';
 
 @Entity() // sql table === 'coffee'
 export class Coffee {
@@ -18,14 +20,15 @@ export class Coffee {
   @Column()
   brand: string;
 
-  @Column({default: 0})
+  @Column({
+    default: 0
+  })
   recommendations: number;
 
   @JoinTable()
   @ManyToMany(
     type => Flavor,
-    flavor => flavor.coffees,
-    {
+    flavor => flavor.coffees, {
       cascade: true, // 👈 or optionally just insert or update ['insert']
     },
   )

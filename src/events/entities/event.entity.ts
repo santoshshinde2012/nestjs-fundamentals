@@ -1,17 +1,27 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    Index
+} from "typeorm";
 
 /* Event */
 @Entity()
 export class Event {
-  @PrimaryGeneratedColumn()
-  id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
-  @Column()
-  type: string; 
+    @Column()
+    type: string;
 
-  @Column()
-  name: string; 
+    /** 
+     * To help speed up this search, we can define an index on the “name” column 
+     * using the @Index decorator. 
+     */
+    @Index()
+    @Column()
+    name: string;
 
-  @Column('json')
-  payload: Record<string, any>;
+    @Column('json')
+    payload: Record < string, any > ;
 }
