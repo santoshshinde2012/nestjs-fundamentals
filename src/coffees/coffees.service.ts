@@ -18,7 +18,7 @@ export class CoffeesService {
     private readonly coffeeRepository: Repository<Coffee>,
     @InjectRepository(Flavor)
     private readonly flavorRepository: Repository<Flavor>,
-    private coffeesConfiguration: ConfigType<typeof coffeesConfig>, 
+    private readonly configService: ConfigService,
   ) {
     const databaseHost = this.configService.get('database.host', 'localhost');
     console.log(databaseHost);
