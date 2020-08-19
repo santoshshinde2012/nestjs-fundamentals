@@ -60,6 +60,50 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+
+```bash
+$ docker-compose up -d
+
+```
+
+## Creating a TypeOrm Migration -  Setting up Migrations
+
+```bash
+npx typeorm migration:create -n CoffeeRefactor
+
+```
+
+## RUNNING MIGRATIONS 
+
+```bash
+You must BUILD your Nest project (so that everything is output to the `/dist/` folder,
+before a Migration can run, it needs compilated files.
+
+Compile project first 
+$ npm run build
+
+Run migration(s) 
+$ npx typeorm migration:run
+
+REVERT migration(s)
+$ npx typeorm migration:revert
+
+Let TypeOrm generate migrations (for you)
+$ npx typeorm migration:generate -n SchemaSync
+```
+
+
+## Nest CLI - Generate a new CoffeeRatingModule
+
+```bash
+nest g mo coffee-rating
+```
+
+## Nest CLI - Generate a new CoffeeRatingService 
+
+```bash
+nest g s coffee-rating
+```
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
