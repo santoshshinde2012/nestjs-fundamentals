@@ -137,6 +137,11 @@ nest g interceptor common/interceptors/timeout
 nest g pipe common/pipes/parse-int
 ```
 
+## Generate LoggingMiddleware with Nest CLI
+
+```bash
+nest g middleware common/middleware/logging
+```
 
 ## Support
 
