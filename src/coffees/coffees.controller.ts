@@ -2,8 +2,13 @@ import { Controller, Get, Param, Post, Body, HttpCode, HttpStatus, Patch, Delete
 import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
-import { ApiResponse } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
+/**
+ * Swagger Tags decorator.
+ * 💡 Note: Can also be done on an individual method-level if needed as well!
+ */
+@ApiTags('coffees')
 @Controller('coffees')
 export class CoffeesController {
     constructor(private readonly coffeesService: CoffeesService) { }
