@@ -36,3 +36,14 @@ export class CoffeesService {}
 @Injectable({ scope: Scope.REQUEST })
 export class CoffeesService {}
 ```
+
+## ConfigModule
+```bash
+  /** 
+  * Have ConfigModule *ignore* .env files 
+  * Useful when using Provider UIs such as Heroku, etc (and they handle all ENV variables)
+  */
+  ConfigModule.forRoot({
+    ignoreEnvFile: true,
+  });
+```
