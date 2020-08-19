@@ -92,55 +92,65 @@ Let TypeOrm generate migrations (for you)
 $ npx typeorm migration:generate -n SchemaSync
 ```
 
-
-## Nest CLI - Generate a new CoffeeRatingModule
+#### Nest CLI - Generate a new CoffeeRatingModule
 
 ```bash
 nest g mo coffee-rating
 ```
 
-## Nest CLI - Generate a new CoffeeRatingService 
+#### Nest CLI - Generate a new CoffeeRatingService 
 
 ```bash
 nest g s coffee-rating
 ```
 
-## Generate Filter with Nest CLI 
+#### Generate Filter with Nest CLI 
 
 ```bash
 nest g filter common/filters/http-exception
 ```
 
-## Generate ApiKeyGuard with Nest CLI
+#### Generate ApiKeyGuard with Nest CLI
 
 ```bash
 nest g guard common/guards/api-key
 ```
 
-## Generate WrapResponseInterceptor with Nest CLI 
+#### Generate WrapResponseInterceptor with Nest CLI 
 
 ```bash
 nest g interceptor common/interceptors/wrap-response
 ```
 
 
-## Generate TimeoutInterceptor with Nest CLI 
+#### Generate TimeoutInterceptor with Nest CLI 
 
 ```bash
 nest g interceptor common/interceptors/timeout
 ```
 
 
-## Generate ParseIntPipe with Nest CLI
+#### Generate ParseIntPipe with Nest CLI
 
 ```bash
 nest g pipe common/pipes/parse-int
 ```
 
-## Generate LoggingMiddleware with Nest CLI
+#### Generate LoggingMiddleware with Nest CLI
 
 ```bash
 nest g middleware common/middleware/logging
+```
+
+####  Installing @nestjs/swagger
+
+```bash
+/**
+ * Installing @nestjs/swagger
+ * & Swagger UI for Express.js (which our application uses)
+ * 💡 Note: If your application is using Fastiy, install `fastify-swagger` instead
+ */
+npm install --save @nestjs/swagger swagger-ui-express
 ```
 
 ## Support
