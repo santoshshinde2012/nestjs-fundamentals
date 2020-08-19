@@ -117,6 +117,11 @@ nest g filter common/filters/http-exception
 nest g guard common/guards/api-key
 ```
 
+## Generate WrapResponseInterceptor with Nest CLI 
+
+```bash
+nest g interceptor common/interceptors/wrap-response
+```
 
 ## Support
 
