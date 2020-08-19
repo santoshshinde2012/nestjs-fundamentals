@@ -104,6 +104,45 @@ nest g mo coffee-rating
 ```bash
 nest g s coffee-rating
 ```
+
+## Generate Filter with Nest CLI 
+
+```bash
+nest g filter common/filters/http-exception
+```
+
+## Generate ApiKeyGuard with Nest CLI
+
+```bash
+nest g guard common/guards/api-key
+```
+
+## Generate WrapResponseInterceptor with Nest CLI 
+
+```bash
+nest g interceptor common/interceptors/wrap-response
+```
+
+
+## Generate TimeoutInterceptor with Nest CLI 
+
+```bash
+nest g interceptor common/interceptors/timeout
+```
+
+
+## Generate ParseIntPipe with Nest CLI
+
+```bash
+nest g pipe common/pipes/parse-int
+```
+
+## Generate LoggingMiddleware with Nest CLI
+
+```bash
+nest g middleware common/middleware/logging
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
