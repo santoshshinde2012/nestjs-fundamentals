@@ -18,11 +18,17 @@ export class CoffeesService {
     private readonly coffeeRepository: Repository<Coffee>,
     @InjectRepository(Flavor)
     private readonly flavorRepository: Repository<Flavor>,
-    private readonly configService: ConfigService,
+    private coffeesConfiguration: ConfigType<typeof coffeesConfig>, 
   ) {
     const databaseHost = this.configService.get('database.host', 'localhost');
     console.log(databaseHost);
+    /* Grab coffees config within App */
+    const coffeesConfig = this.configService.get('coffees');
+    console.log(coffeesConfig);
+    const foo = this.configService.get('coffees.foo');
+    console.log(foo);
   }
+
 
   /** 
    * CoffeesService
